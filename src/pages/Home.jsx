@@ -13,6 +13,13 @@ export default function Home() {
             <Link to="/create" className="text-blue-600 underline">
                 Create Post
             </Link>
+
+            <div className="mt-6 space-y-4">
+                {posts.map(post => (
+                    <Link  
+                        key
+                ))}
+            </div>
         </div>
     )
 }
