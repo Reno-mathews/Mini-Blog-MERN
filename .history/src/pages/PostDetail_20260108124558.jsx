@@ -14,4 +14,4 @@ export default function PostDetail({ posts }) {
             <p className="mt-4 text-gray-700">{post.content}</p>
         </div>
     );
-}  
+}
