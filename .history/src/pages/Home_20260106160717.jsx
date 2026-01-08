@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import PostCard from "../components/PostCard";
 
 const posts = [
     { id: 1, title: "First Post", content: "Hello World" },
@@ -17,7 +16,14 @@ export default function Home() {
 
             <div className="mt-6 space-y-4">
                 {posts.map(post => (
-                    
+                    <Link  
+                        key={post.id}
+                        to={`/post/${post.id}`}
+                        className="block p-4 border rounded hover:bg-gray-50"
+                    >
+                        <h2 className="text-xl font-semibold">{post.title}</h2>
+                        <p className="text-gray-600">{post.content}</p>
+                    </Link>
                 ))}
             </div>
         </div>
