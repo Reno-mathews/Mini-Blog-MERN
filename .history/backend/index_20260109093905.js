@@ -18,7 +18,4 @@ app.listen(PORT, () => {
 });
 
 mongoose 
-    .connect("process.env.MONGO_URI")
-    .then(() => console.log("MongoDB connected"))
-    .catch(err => console.error(err));
-    
+    .connect("mongodb+srv://renomathews10pro:Miniblog456@cluster0.gfn7pmq.mongodb.net/mini-blog?appName=Cluster0")
