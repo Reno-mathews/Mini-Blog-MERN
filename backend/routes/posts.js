@@ -6,7 +6,7 @@ const router = express.Router();
 // GET all posts
 router.get("/", async (req,res) => {
     try {
-        const posts = (await Post.find()).toSorted({ createdAt: -1 });
+        const posts = await Post.find().sort({ createdAt: -1 });
         res.json(posts);
     } catch (err) {
         res.status(500).json({ message: "Failed to fetch posts "});
