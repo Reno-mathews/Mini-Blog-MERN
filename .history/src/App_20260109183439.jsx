@@ -13,7 +13,6 @@ function App() {
       .then((data) => setPosts(data))
       .catch((err) => console.error(err));
   }, []);
-  
   return (
       <Routes>
         <Route path="/" element={<Home posts={posts} />} />

@@ -6,14 +6,6 @@ import PostDetail from "./pages/PostDetail";
 
 function App() {
   const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:5000/posts")
-      .then((res) => res.json())
-      .then((data) => setPosts(data))
-      .catch((err) => console.error(err));
-  }, []);
-  
   return (
       <Routes>
         <Route path="/" element={<Home posts={posts} />} />

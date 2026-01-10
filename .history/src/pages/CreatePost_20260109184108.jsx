@@ -17,14 +17,7 @@ function handleSubmit(e) {
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify({ title, content }),
     })
-        .then((res) => res.json())
-        .then((newPost) => {
-            setPosts([newPost, ...posts]);
-            navigate("/");
-        })
-        .catch((err) => console.error(err));
 }
 
 return (
